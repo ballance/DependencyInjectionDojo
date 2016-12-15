@@ -2,10 +2,12 @@
 using Autofac;
 using dojo.lib;
 using dojo.lib.FootClan;
+using dojo.lib.Personas.FootClanPersonas;
+using dojo.lib.Personas.TurtlePersonas;
 using dojo.lib.Pizzas;
-using dojo.lib.Traits;
 using dojo.lib.Turtles;
-using dojo.lib.Weapons;
+using dojo.lib.Weapons.Foot;
+using dojo.lib.Weapons.Turtle;
 
 namespace dojo.runner
 {
@@ -13,18 +15,25 @@ namespace dojo.runner
     {
         public static void Main()
         {
-            ContstuctorInjectionDojo();
+            ConstuctorInjectionDojo();
             //DependencyInjectionDojo();
 
             Console.ReadKey();
         }
 
-        private static void ContstuctorInjectionDojo()
+        private static void ConstuctorInjectionDojo()
         {
-            var turtle = new NinjaTurtle(new BowStaff(new Donatello()), new Cheese(), new Donatello());
-            var foot = new Shredder();
+            var donatello = new Donatello();
+            var turtle = new NinjaTurtle(new BowStaff(donatello), new Pepperoni(), donatello);
+            var foot = new FootClan(new Shredder(), new Armorblades("Shredder"));
 
             turtle.Speak();
+            Console.WriteLine();
+
+            foot.Attack(turtle);
+            Console.WriteLine();
+
+            foot.Speak();
             Console.WriteLine();
 
             turtle.Attack(foot);
@@ -44,6 +53,12 @@ namespace dojo.runner
             var foot = dojo.GetFootClan();
 
             turtle.Speak();
+            Console.WriteLine();
+
+            foot.Attack(turtle);
+            Console.WriteLine();
+
+            foot.Speak();
             Console.WriteLine();
 
             turtle.Attack(foot);

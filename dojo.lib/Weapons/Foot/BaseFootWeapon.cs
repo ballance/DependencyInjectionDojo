@@ -1,6 +1,6 @@
-namespace dojo.lib.FootClan
+namespace dojo.lib.Weapons.Foot
 {
-    public class BaseFootClan
+    public class BaseFootWeapon
     {
         public override string ToString()
         {

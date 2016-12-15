@@ -1,12 +1,12 @@
 using System;
 
-namespace dojo.lib.Traits
+namespace dojo.lib.Personas.TurtlePersonas
 {
-    public abstract class BaseTurtleTrait : ITurtleTraits
+    public abstract class BaseTurtlePersona : ITurtlePersona
     {
         public virtual void Say()
         {
-            Console.Write("COWABUNGA!!1!");
+            Console.Write("Turtle: COWABUNGA!!1!");
         }
 
         public override string ToString()

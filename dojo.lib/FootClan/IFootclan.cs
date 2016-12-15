@@ -1,9 +1,13 @@
-﻿namespace dojo.lib.FootClan
+﻿using dojo.lib.Turtles;
+
+namespace dojo.lib.FootClan
 {
     public interface IFootClan
     {
-        void Attack();
+        void Attack(INinjaTurtle target);
 
         void Defend();
+
+        void Speak();
     }
 }

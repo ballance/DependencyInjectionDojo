@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using dojo.lib.Personas.TurtlePersonas;
 using dojo.lib.Turtles;
 
 namespace dojo.lib.Pizzas
 {
-    public class Pepperoni : IPizza
+    public class Anchovy : IPizza
     {
         public void Eat(ITurtlePersona turtle)
         {
-            Console.WriteLine(turtle + " eats a slice of Pepperoni pizza!");
+            Console.WriteLine("Anchovies?!?  Turtles HATE anvchovies!1!");
         }
     }
 }

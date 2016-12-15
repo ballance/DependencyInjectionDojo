@@ -1,5 +1,5 @@
-﻿using dojo.lib.FootClan;
-using dojo.lib.Traits;
+﻿using Castle.DynamicProxy.Contributors;
+using dojo.lib.FootClan;
 
 namespace dojo.lib.Turtles
 {
@@ -8,5 +8,6 @@ namespace dojo.lib.Turtles
         void Attack(IFootClan target);
         void EatPizza();
         void Speak();
+        void Defend();
     }
 }
