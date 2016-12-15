@@ -1,1 +1,3 @@
-# DependencyInjectionDojo
+# Dependency Injection Dojo
+
+Here's a funky way to learn about Dependency Injection by way of Ninja Tortises...
